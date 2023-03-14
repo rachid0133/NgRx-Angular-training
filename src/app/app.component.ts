@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'my-app';
+  count = 0;
+
+  constructor(private store: Store) { 
+    this.store.subscribe
+  }
+
+  increase() { }
+
+  decrease() { }
 }
