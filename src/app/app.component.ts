@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { StoreInterface } from './store/store';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +8,17 @@ import { Store } from '@ngrx/store';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  count = 0;
+  count: number = 0;
 
-  constructor(private store: Store) { 
-    this.store.subscribe
+  constructor(private store: Store<StoreInterface>) {
+    this.store.subscribe(data => this.count = data.counter.n)
   }
 
-  increase() { }
+  increase() {
+    this.store.dispatch({ type: "increament" });
+  }
 
-  decrease() { }
+  decrease() {
+    this.store.dispatch({ type: "decreament" });
+  }
 }

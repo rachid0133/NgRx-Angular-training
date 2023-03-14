@@ -1,5 +1,13 @@
 import { Action } from "@ngrx/store";
 
+export interface StoreInterface{
+    counter: Counter
+}
+
+interface Counter{
+    n: number
+}
+
 let initialState = {
     n: 0
 }
