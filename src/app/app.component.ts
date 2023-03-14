@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Decreament, Increament, StoreInterface } from './store/store';
+import { Decreament, Increament } from './store/actions/counter.action';
+import {StoreInterface } from './store/store';
 
 @Component({
   selector: 'app-root',
