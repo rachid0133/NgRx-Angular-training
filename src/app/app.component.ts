@@ -15,10 +15,10 @@ export class AppComponent {
   }
 
   increase() {
-    this.store.dispatch({ type: "increament" });
+    this.store.dispatch({ type: "increament", payload:1 });
   }
 
   decrease() {
-    this.store.dispatch({ type: "decreament" });
+    this.store.dispatch({ type: "decreament", payload:1 });
   }
 }
